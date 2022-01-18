@@ -1,0 +1,52 @@
+#include<iostream>
+using namespace std;
+int ganjilGenapRekursif(char kode,int awal,int akhir){
+
+        if (awal>akhir){
+            return 0;
+        }else{    
+            if (kode=='-'){
+                if (awal%2==0){
+                awal+=1;
+                } 
+            }else{
+                if (awal%2==1){
+                awal+=1;
+                }
+            }
+            cout<<awal;
+            if (awal<akhir){
+                cout<<" + ";
+            }else{
+                cout<<" = ";
+            }
+            return awal + ganjilGenapRekursif(kode,awal+2,akhir);
+        }    
+    
+}
+int main(){
+    int awalBilangan,akhirBilangan;
+    char pilih;
+    cout<<"Input bilangan awal : ";
+    cin>>awalBilangan;
+    cout<<"Input bilangan akhir : ";
+    cin>>akhirBilangan;
+    cout<<"[-] Deret Ganjil\n"
+        <<"[+] Deret Genap\n"
+        <<"Pilihan [- / +] : ";
+        cin>>pilih;
+    switch (pilih)
+    {
+    case '-':
+        cout<<"Deret Ganjil : "<<endl;
+        cout<<ganjilGenapRekursif(pilih,awalBilangan,akhirBilangan);
+        break;
+    case '+':
+        cout<<"Deret Genap : "<<endl;
+        cout<<ganjilGenapRekursif(pilih,awalBilangan,akhirBilangan);
+        break;
+    default:
+        break;
+    }
+}
+

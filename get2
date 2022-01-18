@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a[8];
+    int jumlah;
+    //memasukkan data
+    for (int i=0;i<=7;i++){
+        cout<<"masukkan nilai ke "<<i+1<<": ";
+        cin>>a[i];
+    }
+    //penjumlahan
+    jumlah=0;
+    for (int i=0;i<=7;i++){
+        jumlah=jumlah+a[i];
+        cout<<"perulangan ke-"<<i+1<<"jumlah="<<jumlah-a[i]<<"+"<<a[i]<<"="<<jumlah<<endl;
+    }
+    cout<<"jumlah seluruhnya: "<<jumlah<<endl;
+    cout<<"program oleh irfan muhammad ghani, kangghani.com";
+    //program oleh irfan muhammad ghani, kangghani.com
+    return 0;
+}
